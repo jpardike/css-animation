@@ -1,0 +1,61 @@
+body {
+    min-height: 100vh;
+}
+
+button {
+    margin-bottom: 20px;
+}
+
+.target {
+    background-color: blueviolet;
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+.move {
+    animation-name: leftRight;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+}
+
+.flip {
+    animation-name: flip;
+    animation-duration: 1s;
+}
+
+@keyframes leftRight {
+    from {
+        /* margin-left: 0; */
+        /* left: 0; */ 
+        transform: translateY(0);
+    }
+
+    10% {
+        transform: translateY(200px);
+    }
+    
+    15% {
+        transform: translateY(200px);
+    }
+    20% {
+        transform: translateY(300px);
+    }
+
+    to {
+        /* margin-left: 90vw; */
+        /* left: 90vw; */
+        transform: translateY(0);
+    }
+}
+
+@keyframes flip {
+    from {
+        transfom: rotateY(0);
+    }
+
+    to {
+        transform: rotateY(180deg);
+    }
+}
